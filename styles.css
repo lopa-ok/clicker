@@ -1,32 +1,73 @@
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-color: #fbefd6;
+    font-family: 'Press Start 2P', cursive;
 }
 
-.container {
-    text-align: center;
-}
-
-#clickButton {
+#count {
     font-size: 24px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#clickButton:active {
-    background-color: #45a049;
-}
-
-#score {
     margin-top: 20px;
-    font-size: 32px;
+}
+
+.base {
+    background: #cacaca;
+    width: 20vmin;
+    border-radius: 27vmin;
+    box-shadow: 0 6vmin 0.15vmin 0vmin #777, 0 4vmin 0.15vmin 0vmin #777, 0 2vmin 0.15vmin 0vmin #777;
+    padding: 0vmin 2vmin 2vmin 2vmin;
+    z-index: 1;
+    transform: rotateX(60deg) rotateZ(0deg);
+    margin-top: -4.5vmin;
+    height: 22vmin;
+}
+
+button#activate {
+    background: #d60505;
+    border: 0;
+    width: 20vmin;
+    height: 19vmin;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    z-index: 2;
+    box-shadow: 0 4vmin 0.15vmin 0vmin #af0000, 0 2vmin 0.15vmin 0vmin #af0000;
+    top: -2.5vmin;
+    border: 0.5vmin solid #af0000a1;
+    transition: all 0.25s ease 0s;
+}
+
+button#activate:hover {
+    box-shadow: 0 3vmin 0.15vmin 0vmin #af0000, 0 1vmin 0.15vmin 0vmin #af0000;
+    top: -1.5vmin;
+    transition: all 0.5s ease 0s;
+}
+
+button#activate:active, button#activate.pushed {
+    box-shadow: 0 1vmin 0.15vmin 0vmin #af0000, 0 1vmin 0.15vmin 0vmin #af0000;
+    top: 0.5vmin;
+    transition: all 0.25s ease 0s;
+}
+
+button#activate.pushed {
+    box-shadow: 0 0 20px 10px #ff3c3c, 0 0 100px 50px #ff2828;
+    background: #ff0000;
+    border-bottom: 3px solid #00000020;
+}
+
+#count-container {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
 }

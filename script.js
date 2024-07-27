@@ -1,8 +1,8 @@
-let score = 0;
-const scoreDisplay = document.getElementById('score');
-const clickButton = document.getElementById('clickButton');
+let count = 0;
+        const countEl = document.getElementById('count');
+        const button = document.getElementById('activate');
 
-clickButton.addEventListener('click', () => {
-    score++;
-    scoreDisplay.textContent = score;
-});
+        button.addEventListener('click', () => {
+            count++;
+            countEl.innerText = count;
+        });
